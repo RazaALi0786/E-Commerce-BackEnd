@@ -6,7 +6,7 @@ const server_config = require("./configs/server.config");
 const db_config = require("./configs/db.config");
 const user_model = require("./models/user.model");
 const bcrypt = require("bcryptjs");
-app.use(express.json);
+app.use(express.json());
 // Create admin user at startof application if not present
 // Connect with MongoDB
 mongoose.connect(db_config.DB_URL);

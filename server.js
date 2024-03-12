@@ -32,7 +32,7 @@ async function init() {
     user = await user_model.create({
       name: "Raza",
       userId: "admin",
-      email: "raza26296@gmail.com",
+      email: "raza54398@gmail.com",
       userType: "ADMIN",
       password: bcrypt.hashSync("Welcome1", 8),
     });

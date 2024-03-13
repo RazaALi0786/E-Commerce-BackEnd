@@ -12,4 +12,5 @@ module.exports = (app) => {
     [authMW.verifySignUpBody],
     authController.signup
   );
+  app.post("/ecomm/api/v1/auth/signin", authController.signin);
 };

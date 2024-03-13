@@ -37,23 +37,17 @@ const verifySignUpBody = async (req, res, next) => {
   }
 };
 const verifySignInBody = async (req, res, next) => {
-  try {
-    if (!req.body.userId) {
-      return res.status(400).send({
-        message: "Failed! UserId is not provided",
-      });
-    }
-    if (!req.body.password) {
-      return res.status(400).send({
-        message: "Failed! Password is not provided",
-      });
-    }
-  } catch (err) {
-    console.log("Error while validating the request object");
-    res.status(500).send({
-      message: "Error while validating the request body",
+  if (!req.body.userId) {
+    return res.status(400).send({
+      message: "userId is not provided",
     });
   }
+  if (!req.body.password) {
+    return res.status(400).send({
+      message: "password is not provided",
+    });
+  }
+  next();
 };
 module.exports = {
   verifySignUpBody: verifySignUpBody,

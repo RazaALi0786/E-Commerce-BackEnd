@@ -4,7 +4,7 @@
  * I need to intercept this
  */
 const authController = require("../controllers/auth.controller");
-const authMW = require("../middlewares/auth_mw");
+const authMW = require("../middlewares/auth.mw");
 
 module.exports = (app) => {
   app.post(
